@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>   
+    <script src="scripts/jquery-1.6.2.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGtHU2O8M9tgHtp6jphrIRSijtuggra_o"></script>
+    <script src="bicycle.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bicycle.css">
+
+    <title>RPRI</title>
+    <link rel="apple-touch-icon" href="bicycle_logo.png"/>
+    <link rel="icon" type="image/png" href="bicycle_logo.png"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+<body>
+    <nav class="navbar bg-light">
+        <a class="navbar-brand" href="#">RPRI</a>
+        <ul class ="navbar-nav">
+            <li class="nav-item" id="help">
+                Help?
+            </li>
+        </ul>
+    </nav>
+    <div class="container" style="border-bottom:solid lightgray thin;padding-bottom:10px">
+        <h2 class="text-muted" style="display: block;">
+            Real-time public bicycle rental information
+        </h2>
+        <h5>Check out if any <code>rental stations</code> have bikes available for rent!</h5>     
+    </div>
+    <div class="container">
+        <div id="inputWindow" class='container'>
+            <label for="serchstation">공공자전거 대여소(지하철역) : </label>
+            <input list="stationlist" id="serchstation" name="serchstation" />
+            <datalist name="stationlist" id="stationlist">
+            </datalist>
+            <button class="ui-button ui-widget ui-corner-all" id="searchButton">조회</button>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div id="cardslist" class="container col-lg-5">
+            <h5><mark>선택한 대여소 정보</mark><span class="badge badge-primary" id="date"></span></h5>
+            <div class="alert alert-info alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>INFO!</strong> 원하는 대여소를 선택한 후 조회 버튼을 누르면 이곳에 실시간 정보가 뜰거예요!
+            </div>
+        </div>
+        <div class="container col-lg-5">
+            <div id="clickMe_1" class="card bg-info text-white">
+                <div class="card-body">최근 조회한 대여소의 위치를 지도로 보고 싶다면 이 곳을 누르세요!<span id="latelystation"><br>* 최근 조회한 대여소가 없습니다..</span></div>
+            </div>
+            <div id="mapInfo">
+                <div id="map">여기에 지도가 표시될거예요!</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <footer>
+            <p class="text-muted">Copyright &copy; Seoul</p>
+            <p class="text-muted">학번_이름 : 2020810067 전은진</p>
+        </footer>
+    </div>
+</body>

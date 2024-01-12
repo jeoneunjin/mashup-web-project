@@ -1,0 +1,76 @@
+#inputWindow {
+    padding :10px;
+}
+#clickMe_1 {
+    padding : 5px;
+    display: block;
+    border : 1px solid;
+}
+#mapInfo {
+    padding : 10px;
+    display: none;
+    border : 1px solid;
+    background-color: white;
+}
+#cardslist {
+    padding : 10px;
+    border: 1px solid skyblue;
+    margin : 10px;
+}
+.detailInfo{
+    background-color:#D8F6F5;
+    padding : 10px;
+    margin : 10px;
+}
+.btn btn-outline-primary {
+    display :inline;
+    margin : 10px;
+}
+
+#date {
+    float: right;
+    display: inline;
+}
+.navbar-brand {
+    font-family: fantasy;
+    font-size: larger;
+    border: blue;
+}
+#help{
+    font-family: fantasy;
+    cursor: default;
+}
+#help:hover{
+    position: relative;
+}
+#help:after{
+    content: "사용방법은 다음과 같습니다! \A 먼저 원하는 대여소를 검색/선택한 후 조회 버튼을 누릅니다. \A 조회 버튼을 누르게되면 아래에 선택한 대여소에 대한 실시간 정보가 뜹니다! \A 이때 'RELOAD'버튼을 누르면 정보가 새로고침되어 정보를 다시 얻어오고, \A 'DELETE'버튼을 누르면 정보가 적힌 카드를 지우게 됩니다. \A 보조 기능으로는 최근 조회한 대여소의 지도상 위치를 볼 수 있습니다.";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+	color: #FFFFFF;
+	font-size: 12px;
+	z-index: 9999;
+    padding: 10px;
+    width: 300px;
+    position: absolute;
+    opacity: 0;
+    top:90%;
+}
+#help:hover::after{
+	top: 130%;
+	right: 0;
+	opacity: 1;
+}
+nav {
+    margin-bottom: 15px;
+}
+#latelystation {
+    font-size: small;
+}
+#map{
+    margin: 10px;
+	width: 300px;
+	height: 300px;
+    display: inline-block;
+	border: 1px solid black;
+}
